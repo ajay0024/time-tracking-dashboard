@@ -1,0 +1,210 @@
+:root {
+  --Blue: hsl(246, 80%, 60%);
+  --Lightred: hsl(15, 100%, 70%);
+  --Soft_blue: hsl(195, 74%, 62%);
+  --Light_red: hsl(348, 100%, 68%);
+  --Lime_green: hsl(145, 58%, 55%);
+  --Violet: hsl(264, 64%, 52%);
+  --Soft_orange: hsl(43, 84%, 65%);
+  --Very_dark_blue: hsl(226, 43%, 10%);
+  --Dark_blue: hsl(235, 46%, 20%);
+  --Desaturated_blue: hsl(235, 45%, 61%);
+  --Pale_Blue: hsl(236, 100%, 87%);
+}
+
+body {
+  background-color: var(--Very_dark_blue);
+  color: var(--Pale_Blue);
+  font-family: 'Rubik', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 7rem 0;
+}
+
+/* General classes */
+.fs-18 {
+  font-size: 18px;
+}
+
+.fc-white {
+  color: white;
+}
+
+.fs-2-5 {
+  font-size: 2.5rem;
+}
+
+.fs-2 {
+  font-size: 1.5rem;
+}
+
+.fs-thin {
+  font-weight: 300;
+}
+
+/* Card Placements */
+.container {
+  display: grid;
+  grid-gap: 2rem;
+}
+
+/* Card-Backgorunds */
+#top-card {
+  background-color: var(--Dark_blue);
+}
+
+#work-card {
+  background-color: var(--Lightred);
+}
+
+#play-card {
+  background-color: var(--Soft_blue);
+}
+
+#study-card {
+  background-color: var(--Light_red);
+}
+
+#exercise-card {
+  background-color: var(--Lime_green);
+}
+
+#social-card {
+  background-color: var(--Violet);
+}
+
+#self-care-card {
+  background-color: var(--Soft_orange);
+}
+
+.card {
+  max-width: 20em;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--Dark_blue);
+}
+
+.top-card-header {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  background-color: var(--Blue);
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  grid-column-gap: 1.5rem;
+}
+
+.top-card-header img {
+  max-width: 100%;
+  grid-row: span 2;
+  border-radius: 50%;
+  border: 2px solid white;
+  scale: 1.25;
+}
+
+.card-header {
+  position: absolute;
+  right: 2em;
+  top: -0.6rem;
+}
+
+.card-content {
+  display: grid;
+  margin-top: 2.5rem;
+  background-color: var(--Dark_blue);
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  z-index: 1;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 1rem;
+}
+
+.top-card-links {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+
+.top-card-links a {
+  color: var(--Pale_Blue);
+  text-decoration: none;
+}
+
+.top-card-links a.active {
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+
+.card-link img:hover {
+  cursor: pointer;
+  filter: brightness(100);
+}
+
+.middle {
+  display: flex;
+  display: columns;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media screen and (min-width:1100px) {
+  body{
+    padding: 0;
+  }
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #top-card {
+    grid-row: span 2;
+  }
+
+  .card {
+    width: 15em;
+  }
+
+  .top-card-links {
+    /* height: 100%; */
+    padding: 1rem 2rem;
+    flex-direction: column;
+    /* justify-content: space-between; */
+  }
+
+  .top-card-header {
+    grid-template-columns: 1fr;
+  }
+
+  .fs-2 {
+    font-size: 3rem;
+  }
+
+  .top-card-header img {
+    max-width: 5rem;
+    grid-row: span 1;
+    scale: 1;
+    margin-bottom: 2.5rem;
+  }
+
+  .card-link {
+    grid-row: span 2;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .previous-time {
+    grid-column: span 2;
+    justify-content: flex-start;
+  }
+
+  .top-card-links a {
+    padding-bottom: 0.6rem;
+  }
+}
