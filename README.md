@@ -34,11 +34,6 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
-### Links
-
 - Solution URL: [Link to Github Solution](https://github.com/ajay0024/time-tracking-dashboard)
 - Live Site URL: [Preview Live](https://ajay0024.github.io/time-tracking-dashboard/)
 
